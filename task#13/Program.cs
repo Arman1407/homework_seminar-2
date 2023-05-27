@@ -3,53 +3,19 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-
-
-
 Console.Clear();
 Console.Write("Введите число: ");
-int number = int.Parse(Console.ReadLine()!);
-return result;
+int n = int.Parse(Console.ReadLine()!);
 
-    if (number < 100);
-        {
-            number /= 10;
-            return number % 10;
+if (n > 1000)
+{
+    int b = n / 10;
+    n++;
+    Console.WriteLine(b % 10);
+}
 
-            else if (number > 999);
-            {
-                Console.WriteLine("Третьей цифры нет");
-                return false;
-            }
-        }   
-        Console.WriteLine(number);
-
-
-
-// Показать 2 цифру в любом трехзначном числе
-
-// Console.Clear();
-// int number = new Random().Next(100, 1000); // [100; 999]
-// Console.WriteLine(number);
-// Console.WriteLine(number / 100 * 10 + number % 100);
-
-
-
-// Console.Clear();
-// Console.Write("Введите число: ");
-// int number = int.Parse(Console.ReadLine()!);
-// if (number < 100 || number >= 1000)
-// {
-//     Console.WriteLine("Вы ввели не то число. Повторите попытку");
-//     return;
-// }
-// Console.WriteLine(number / 10 % 10);
-
-
-
-
-
-
-////////////
-
+if (n < 100)
+{
+        Console.WriteLine("Третьей цифры нет");
+}
 
