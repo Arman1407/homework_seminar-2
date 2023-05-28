@@ -11,7 +11,7 @@ if (n > 1000)
 {
     int b = n / 10;
     n++;
-    Console.WriteLine(b % 10);
+    Console.WriteLine(b / 10 % 10);
 }
 
 if (n < 100)
