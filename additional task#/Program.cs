@@ -16,13 +16,20 @@
 
 
 Console.Clear();
-Console.Write("Введите последовательность натуральных чисел: ");
-int n = int.Parse(Console.ReadLine()!);
-if (n >= 0 || n <= 100) 
+Console.Write("Введите число: ");
+int n = int.Parse(Console.ReadLine()!), max1 = n, max2 = 0;
+while (n != 0) 
 {
-     Console.WriteLine("Вы ввели числа больше 100 или меньше 0. Повторите попытку");
-    return;
+    Console.WriteLine("Введите число: ");
+    n = int.Parse(Console.ReadLine()!);
+    if (max1 < n)
+    {
+        max2 = max1;
+        max1 =n;
+    }
+    else if (max2 < n)
+        max2 = n;
 }
-Console.WriteLine(n);
+Console.WriteLine(max2);
 
 
