@@ -6,13 +6,21 @@
 Console.Clear();
 Console.Write("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
-
-if (n > 1000)
+int count = 0, m = n;
+while (n >0)
 {
-    int b = n / 10;
-    n++;
-    Console.WriteLine(b / 10 % 10);
+    n = n / 10;
+    count++;
 }
+
+Console.WriteLine($"В числе {m} {count}  цифры");
+
+// if (n > 1000)
+// {
+//     int b = n / 10;
+//     n++;
+//     Console.WriteLine(b / 10 % 10);
+// }
 
 if (n < 100)
 {
