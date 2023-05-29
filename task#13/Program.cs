@@ -6,7 +6,7 @@
 Console.Clear();
 Console.Write("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
-n = Math.Abs(n);
+n = Math.Abs(n);   // указывает на отрицательные числа, можно ибез неё
 if (n < 100)
     Console.WriteLine("Третьей цифры нет");
 else
