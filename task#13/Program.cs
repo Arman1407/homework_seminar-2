@@ -6,24 +6,15 @@
 Console.Clear();
 Console.Write("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
-int count = 0, m = n;
-while (n >0)
-{
-    n = n / 10;
-    count++;
-}
-
-Console.WriteLine($"В числе {m} {count}  цифры");
-
-// if (n > 1000)
-// {
-//     int b = n / 10;
-//     n++;
-//     Console.WriteLine(b / 10 % 10);
-// }
-
+n = Math.Abs(n);
 if (n < 100)
+    Console.WriteLine("Третьей цифры нет");
+else
 {
-        Console.WriteLine("Третьей цифры нет");
+    while (n > 999)   // т.к. 1000 четырехзначное исло
+    {
+        n /= 10;      //  цикл до тех пор пока число не станет трехзначным
+    }                 //  также можно: n = n / 10, убирает по 1 цифре от числа
+Console.WriteLine(n % 10);  // результат, показывает последнюю цифру
 }
 
